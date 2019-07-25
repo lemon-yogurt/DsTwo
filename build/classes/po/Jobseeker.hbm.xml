@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD
+3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<!--  -->
+<class name="po.Jobseeker" table="jobseeker" catalog="DsDB"  schema="dbo">
+ <id name="id" type="int">
+   <column name="id" />
+   <generator class="identity" />
+ </id>
+ <property name="name" type="string">
+   <column name="name" length="50"/>
+ </property>
+ <property name="birthday" type="date">
+   <column name="birthday" />
+ </property>
+ <property name="worktime" type="int">
+   <column name="worktime" />
+ </property>
+ <property name="sex" type="int">
+   <column name="sex"/>
+ </property>
+  <property name="school" type="string">
+   <column name="school" length="50"/>
+ </property>
+ <property name="liveplace" type="string">
+   <column name="liveplace" length="50" />
+ </property>
+  <property name="idcard" type="string">
+   <column name="idcard" length="50" />
+ </property>
+ <property name="phone" type="string">
+   <column name="phone" length="50" />
+ </property>
+ <property name="worktype" type="string">
+   <column name="worktype" length="50" />
+ </property>
+ <property name="workplace" type="string">
+   <column name="workplace" length="50" />
+ </property>
+ <property name="paymin" type="int">
+   <column name="paymin" />
+ </property>
+ <property name="paymax" type="int">
+   <column name="paymax" />
+ </property>
+ <property name="workdate" type="string">
+   <column name="workdate" length="50" />
+ </property>
+ <property name="workstate" type="string">
+   <column name="workstate" length="50" />
+ </property>
+ <property name="workdescribe" type="string">
+   <column name="workdescribe" length="50" />
+ </property>
+ <property name="workexperience" type="string">
+   <column name="workexperience" />
+ </property>
+  <property name="education" type="string">
+   <column name="education" />
+ </property>
+  <property name="username" type="string">
+   <column name="username" length="50" />
+ </property>
+ <property name="password" type="string">
+   <column name="password" length="50" />
+ </property>
+ <property name="type" type="string">
+   <column name="type" length="50" />
+ </property>
+ <property name="img" type="string">
+   <column name="img" length="50" />
+ </property>
+ <property name="age" type="int">
+   <column name="age" />
+ </property>
+</class>
+</hibernate-mapping>

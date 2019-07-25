@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD
+3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<!--  -->
+<class name="po.Comment" table="comment" catalog="DsDB"  schema="dbo">
+ <id name="id" type="int">
+   <column name="id" />
+   <generator class="identity" />
+ </id>
+ <property name="date" type="date">
+   <column name="date" />
+ </property>
+ <property name="comment" type="string">
+   <column name="comment"/>
+ </property>
+ <property name="humanid" type="int">
+   <column name="humanid" />
+ </property>
+ <property name="humantype" type="string">
+   <column name="humantype" length="50"/>
+ </property>
+ <property name="humanname" type="string">
+   <column name="humanname" length="50"/>
+ </property>
+  <property name="questionid" type="int">
+   <column name="questionid" />
+ </property>
+</class>
+</hibernate-mapping>

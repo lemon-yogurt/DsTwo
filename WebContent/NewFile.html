@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>jQuery左右点击滑动效果-jq22.com</title>
+
+<script src="./js/jquery/2.0.0/jquery.min.js"></script>
+<link href="./css/bootstrap/3.3.6/bootstrap.min.css" rel="stylesheet">
+<script src="./js/bootstrap/3.3.6/bootstrap.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){    
+    //向左按钮点击事件
+    var index = 0;
+    var liLen;
+    $(".leftBtn").click(function(){
+        index++;
+        liLen = $(".content ul.contentUl li").length;  //目前长度返回值为6
+        if(index >= 4)
+        {
+            $(".content ul.contentUl").stop();
+            alert("已经到达最后一页！");
+            index = 3;
+        }else{
+            if(index == 1)
+            {
+                $(".content ul.contentUl").animate({left:-index*330},700);
+            }else{
+                $(".content ul.contentUl").animate({left:-index*305},700);
+            }
+        }
+    });
+    //向右按钮点击事件
+    $(".rightBtn").click(function(){
+        if(index == 0)
+        {
+            $(".content ul.contentUl").stop();
+            alert("这是第一页，不能再往前翻了！");
+        }else{
+            index--;
+            if(index == 0)
+            {
+                $(".content ul.contentUl").animate({left:-40},700);
+            }else{
+                $(".content ul.contentUl").animate({left:-index*310},700);
+            }
+        }
+    });
+});
+</script>
+</head>
+<body>
+<div class="adlist">
+<!--整体背景div-->
+<div class="warp">
+    <!--中间内容div-->
+    <div class="divContent">
+        <div class="content">
+            <ul class="contentUl">
+                <li>
+                    <img src="/JS1/img/1.jpg" />
+                    <span>生命如歌，春天似梦 </span>
+                    <hr />
+                    <p>生命如歌，春天似梦，初春更是如诗如画。春似花季靓女，让人悸动，春似那雍容少妇，令人憧憬</p>
+                </li>
+                <li id="second">
+                    <img src="/JS1/img/2.jpg" />
+                    <span>如花的季节，赞扬 </span>
+                    <hr />
+                    <p>一切的生命力开始复苏，温暖如我，正是如花的季节，不是吗？</p>
+                </li>
+                <li>
+                    <img src="/JS1/img/3_1.jpg" />
+                    <span>梦想，不休不止</span>
+                    <hr />
+                    <p>畏惧忍受痛苦比忍受痛苦本身更加糟糕。没有一个心灵在追逐它的梦想时会忍受痛苦。</p>
+                </li>
+                <li>
+                    <img src="/JS1/img/4.jpg" />
+                    <span>时间在叶子的摆动里</span>
+                    <hr />
+                    <p>时间会消磨一切的，她会让我们忘记的。突然想：如果我们忘记了时间，是不是想忘掉的就都能忘掉。</p>
+                </li>
+                <li>
+                    <img src="/JS1/img/5.jpg" />
+                    <span>异乡的海韵,落日的余辉</span>
+                    <hr />
+                    <p>每个人或许都有一个愿望，希望在某年某月某天可以和相爱的人牵手漫步在夕阳西下，落日余晖的海滩中，细数彼此生活的点点滴滴。</p>
+                </li>
+                <li>
+                    <img src="/JS1/img/6.jpg" />
+                    <span>城市夜，一个静谧的夜</span>
+                    <hr />
+                    <p>城市夜，一个静谧的夜。城市里，寒风瑟瑟。酒吧灯红酒绿，这，才是夜市的开始。</p>
+                </li>
+            </ul>
+        </div>
+        
+        <!--向左按钮-->
+        <div class="leftBtn"><img src="/JS1/img/left.png" /></div>
+        <!--向右按钮-->
+        <div class="rightBtn"><img src="/JS1/img/right.png" /></div>
+    </div>
+</div>
+</div>
+
+
+
+</body>
+</html>

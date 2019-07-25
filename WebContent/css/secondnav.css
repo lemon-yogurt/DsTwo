@@ -1,0 +1,25 @@
+@charset "UTF-8";
+.my{
+background-color:rgba(118,238,198,0.1);
+width:85%;
+}
+.my li>a{
+padding:5px;
+color:black;
+}
+.hr1{
+margin-top:0px;
+margin-left:10px;
+margin-right:10px;
+}
+.my li.active>a{
+background-color:#9BCD9B;
+margin:10px;
+padding:5px;
+border-radius:0px;
+
+}
+.my li.active>a:hover{
+background-color:#9BCD9B;
+
+}

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD
+3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<!--  -->
+<class name="po.Greenbuild" table="greenbuilding" catalog="DsDB"  schema="dbo">
+ <id name="id" type="int">
+   <column name="id" />
+   <generator class="identity" />
+ </id>
+ <property name="essay" type="string">
+   <column name="essay" />
+ </property>
+ <property name="date" type="date">
+   <column name="date" />
+ </property>
+ <property name="materialname" type="string">
+   <column name="materialname" length="50" />
+ </property>
+ <property name="img" type="string">
+   <column name="img" length="50"/>
+ </property>
+  <property name="title" type="string">
+   <column name="title" length="50"/>
+ </property>
+</class>
+</hibernate-mapping>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD
+3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<!--  -->
+<class name="po.Question" table="question" catalog="DsDB"  schema="dbo">
+ <id name="id" type="int">
+   <column name="id" />
+   <generator class="identity" />
+ </id>
+ <property name="title" type="string">
+   <column name="title" length="50"/>
+ </property>
+ <property name="describe" type="string">
+   <column name="describe" />
+ </property>
+ <property name="humenid" type="int">
+   <column name="humenid"/>
+ </property>
+  <property name="humentype" type="string">
+   <column name="humentype" length="50"/>
+ </property>
+  <property name="date" type="date">
+   <column name="date" />
+ </property>
+ <property name="img" type="string">
+   <column name="img" length="50" />
+ </property>
+</class>
+</hibernate-mapping>

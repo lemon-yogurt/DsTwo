@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts
+Configuration 2.1//EN"
+"http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+ <package name="strutsBean" extends="struts-default" namespace="/">
+  <action name="tc" class="action.ContestAction" method="tc">
+   <result name="tcsuccess">index.jsp</result>
+   <result name="tcfail">/index.jsp</result>
+  </action>
+  <action name="save" class="action.ContestAction" method="save">
+   <result name="success">/saveSuccess.jsp</result>
+   <result name="fail">/saveFail.jsp</result>
+  </action>
+  <action name="findallC" class="action.ContestAction" method="findAll">
+   <result name="findallCsuccess">/ContestDisplay.jsp</result>
+   <result name="findAllCfail">/saveFail.jsp</result>
+  </action>
+   <action name="findbyEverything" class="action.ContestAction" method="findbyEverything">
+   <result name="findsuccess">/ContestDisplay.jsp</result>
+   <result name="findfail">/saveFail.jsp</result>
+  </action>
+   <action name="findthree" class="action.ContestAction" method="findthree">
+   <result name="findallCsuccess">/index.jsp</result>
+   <result name="findAllCfail">/saveFail.jsp</result>
+  </action>
+  <action name="findbyid" class="action.ContestAction" method="findbyid">
+   <result name="ufsuccess">/ContestDisplayEssay.jsp</result>
+   <result name="findAllCfail">/saveFail.jsp</result>
+  </action>
+  <action name="delete" class="action.ContestAction" method="delete">
+   <result name="dsuccess">saveSuccess.jsp</result>
+   <result name="fail">/saveFail.jsp</result>
+  </action>
+  
+  <action name="Gsave" class="action.GreenbuildAction" method="Gsave">
+   <result name="success">/saveSuccess.jsp</result>
+   <result name="fail">/saveFail.jsp</result>
+  </action>
+  <action name="GfindallC" class="action.GreenbuildAction" method="GfindAll">
+   <result name="findallGsuccess">/GreenbuildDisplay.jsp</result>
+   <result name="findAllGfail">/saveFail.jsp</result>
+  </action>
+   <action name="Gfindbyid" class="action.GreenbuildAction" method="Gfindbyid">
+   <result name="ufsuccess">/GreenbuildDisplayEssay.jsp</result>
+   <result name="findAllCfail">/saveFail.jsp</result>
+  </action>
+   <action name="GfindbyEverything" class="action.GreenbuildAction" method="GfindbyEverything">
+   <result name="Gfindsuccess">/GreenbuildDisplay.jsp</result>
+   <result name="Gfindfail">/saveFail.jsp</result>
+  </action>
+   <action name="Gfindthree" class="action.GreenbuildAction" method="Gfindthree">
+   <result name="findallCsuccess">/index.jsp</result>
+   <result name="findAllCfail">/saveFail.jsp</result>
+  </action>
+  <action name="Gdelete" class="action.GreenbuildAction" method="Gdelete">
+   <result name="dsuccess">/saveSuccess.jsp</result>
+   <result name="fail">/saveFail.jsp</result>
+  </action>
+  <action name="Gupdatefind" class="action.GreenbuildAction" method="Gupdatefind">
+   <result name="ufsuccess">/GreenbuildUpdate.jsp</result>
+   <result name="uffail">/findFail.jsp</result>
+  </action>
+   <action name="Gupdate" class="action.GreenbuildAction" method="Gupdate">
+   <result name="usuccess">/saveSuccess.jsp</result>
+   <result name="ufail">/saveFail.jsp</result>
+  </action>
+  
+   <action name="Psave" class="action.PolicyAction" method="Psave">
+   <result name="success">/saveSuccess.jsp</result>
+   <result name="fail">/saveFail.jsp</result>
+  </action>
+  <action name="PfindallC" class="action.PolicyAction" method="PfindAll">
+   <result name="findallPsuccess">/PolicyDisplay.jsp</result>
+   <result name="findAllPfail">/saveFail.jsp</result>
+  </action>
+   <action name="PfindbyEverything" class="action.PolicyAction" method="PfindbyEverything">
+   <result name="Pfindsuccess">/PolicyDisplay.jsp</result>
+   <result name="Pfindfail">/saveFail.jsp</result>
+  </action>
+  <action name="Pfindthree" class="action.PolicyAction" method="Pfindthree">
+   <result name="findallCsuccess">/index.jsp</result>
+   <result name="findAllCfail">/saveFail.jsp</result>
+  </action>
+   <action name="Pfindbyid" class="action.PolicyAction" method="Pfindbyid">
+   <result name="ufsuccess">/PolicyDisplayEssay.jsp</result>
+   <result name="findAllCfail">/saveFail.jsp</result>
+  </action>
+  <action name="Pdelete" class="action.PolicyAction" method="Pdelete">
+   <result name="dsuccess">/saveSuccess.jsp</result>
+   <result name="fail">/saveFail.jsp</result>
+  </action>
+   <action name="Pupdate" class="action.PolicyAction" method="Pupdate">
+   <result name="usuccess">/saveSuccess.jsp</result>
+   <result name="ufail">/saveFail.jsp</result>
+  </action>
+  
+   <action name="Ssave" class="action.SchoolreAction" method="Ssave">
+   <result name="success">/saveSuccess.jsp</result>
+   <result name="fail">/saveFail.jsp</result>
+  </action>
+  <action name="SfindallC" class="action.SchoolreAction" method="SfindAll">
+   <result name="findallSsuccess">/SchoolreDisplay.jsp</result>
+   <result name="findAllSfail">/saveFail.jsp</result>
+  </action>
+   <action name="Sfindbyid" class="action.SchoolreAction" method="Sfindbyid">
+   <result name="ufsuccess">/SchoolreDisplayEssay.jsp</result>
+   <result name="findAllCfail">/saveFail.jsp</result>
+  </action>
+   <action name="SfindbyEverything" class="action.SchoolreAction" method="SfindbyEverything">
+   <result name="Sfindsuccess">/SchoolreDisplay.jsp</result>
+   <result name="Sfindfail">/saveFail.jsp</result>
+  </action>
+  <action name="Sdelete" class="action.SchoolreAction" method="Sdelete">
+   <result name="dsuccess">/saveSuccess.jsp</result>
+   <result name="fail">/saveFail.jsp</result>
+  </action>
+   <action name="Supdate" class="action.SchoolreAction" method="Supdate">
+   <result name="usuccess">/saveSuccess.jsp</result>
+   <result name="ufail">/saveFail.jsp</result>
+  </action>
+   <action name="Supdatefind" class="action.SchoolreAction" method="Supdatefind">
+   <result name="ufsuccess">/SchoolreUpdate.jsp</result>
+   <result name="uffail">/findFail.jsp</result>
+  </action>
+  
+  <action name="Asave" class="action.AdministratorAction" method="Asave">
+    <result name="success">/LoginChoose.jsp</result>
+   <result name="registerfail">/AdministratorSave.jsp</result>
+  </action>
+  <action name="Alogin" class="action.AdministratorAction" method="Alogin">
+   <result name="loginsuccess">/index.jsp</result>
+   <result name="loginfail">/AdministratorLogin.jsp</result>
+  </action>
+  <action name="AfindallC" class="action.AdministratorAction" method="AfindAll">
+   <result name="findallAsuccess">/AdministratorDisplay.jsp</result>
+   <result name="findAllAfail">/saveFail.jsp</result>
+  </action>
+  <action name="Adelete" class="action.AdministratorAction" method="Adelete">
+   <result name="dsuccess">/saveSuccess.jsp</result>
+   <result name="fail">/saveFail.jsp</result>
+  </action>
+  <action name="Aupdatefind" class="action.AdministratorAction" method="Aupdatefind">
+   <result name="ufsuccess">/AdministratorUpdate.jsp</result>
+   <result name="uffail">/findFail.jsp</result>
+  </action>
+   <action name="Aupdate" class="action.AdministratorAction" method="Aupdate">
+   <result name="usuccess">/AdministratorLogin.jsp</result>
+   <result name="ufail">/saveFail.jsp</result>
+  </action>
+  
+  <action name="Cmsave" class="action.CommentAction" method="Cmsave">
+   <result name="success">/saveSuccess.jsp</result>
+   <result name="fail">/saveFail.jsp</result>
+  </action>
+  <action name="CmfindallC" class="action.CommentAction" method="CmfindAll">
+   <result name="findallCmsuccess">/CommentDisplay.jsp</result>
+   <result name="findAllCmfail">/saveFail.jsp</result>
+  </action>
+  <action name="Cfindbyqid" class="action.CommentAction" method="Cfindbyqid">
+   <result name="ufsuccess">/CommentDisplay.jsp</result>
+  </action>
+  <action name="Cmdelete" class="action.CommentAction" method="Cmdelete">
+   <result name="dsuccess">/saveSuccess.jsp</result>
+   <result name="fail">/saveFail.jsp</result>
+  </action>
+  <action name="Cmupdatefind" class="action.CommentAction" method="Cmupdatefind">
+   <result name="ufsuccess">/CommentUpdate.jsp</result>
+   <result name="uffail">/findFail.jsp</result>
+  </action>
+   <action name="Cmupdate" class="action.CommentAction" method="Cmupdate">
+   <result name="usuccess">/saveSuccess.jsp</result>
+   <result name="ufail">/saveFail.jsp</result>
+  </action>
+  
+  <action name="Esave" class="action.EmploymentAction" method="Esave">
+   <result name="success">/saveSuccess.jsp</result>
+   <result name="fail">/saveFail.jsp</result>
+  </action>
+  <action name="EfindallC" class="action.EmploymentAction" method="EfindAll">
+   <result name="findallEsuccess">/EmploymentDisplay.jsp</result>
+   <result name="findAllEfail">/saveFail.jsp</result>
+  </action>
+   <action name="Efindbyid" class="action.EmploymentAction" method="Efindbyid">
+   <result name="ufsuccess">/EmploymentDisplayMess.jsp</result>
+   <result name="findAllCfail">/saveFail.jsp</result>
+  </action>
+   <action name="EfindbyEverything" class="action.EmploymentAction" method="EfindbyEverything">
+   <result name="Efindsuccess">/EmploymentDisplay.jsp</result>
+   <result name="Efindfail">/saveFail.jsp</result>
+  </action>
+  <action name="Edelete" class="action.EmploymentAction" method="Edelete">
+   <result name="dsuccess">/saveSuccess.jsp</result>
+   <result name="fail">/saveFail.jsp</result>
+  </action>
+  <action name="Eupdatefind" class="action.EmploymentAction" method="Eupdatefind">
+   <result name="ufsuccess">/EmploymentUpdate.jsp</result>
+   <result name="uffail">/findFail.jsp</result>
+  </action>
+   <action name="Eupdate" class="action.EmploymentAction" method="Eupdate">
+   <result name="usuccess">/saveSuccess.jsp</result>
+   <result name="ufail">/saveFail.jsp</result>
+  </action>
+  
+  <action name="Hsave" class="action.HrAction" method="Hsave">
+   <result name="success">/LoginChoose.jsp</result>
+   <result name="registerfail">/HrRegister.jsp</result>
+  </action>
+  <action name="HfindallC" class="action.HrAction" method="HfindAll">
+   <result name="findallHsuccess">/HrDisplay.jsp</result>
+   <result name="findAllHfail">/saveFail.jsp</result>
+  </action>
+   <action name="Hlogin" class="action.HrAction" method="Hlogin">
+   <result name="loginsuccess">/index.jsp</result>
+   <result name="loginfail">/AdministratorLogin.jsp</result>
+  </action>
+  <action name="Hdelete" class="action.HrAction" method="Hdelete">
+   <result name="dsuccess">/saveSuccess.jsp</result>
+   <result name="fail">/saveFail.jsp</result>
+  </action>
+  <action name="Hupdatefind" class="action.HrAction" method="Hupdatefind">
+   <result name="ufsuccess">/HrUpdate.jsp</result>
+   <result name="uffail">/findFail.jsp</result>
+  </action>
+   <action name="Hupdate" class="action.HrAction" method="Hupdate">
+   <result name="usuccess">/AdministratorLogin.jsp</result>
+   <result name="ufail">/saveFail.jsp</result>
+  </action>
+  
+   <action name="Jsave" class="action.JobseekerAction" method="Jsave">
+     <result name="success">/LoginChoose.jsp</result>
+   <result name="registerfail">/JobseekerRegister.jsp</result>
+  </action>
+  <action name="JfindallC" class="action.JobseekerAction" method="JfindAll">
+   <result name="findallJsuccess">/JobseekerDisplay.jsp</result>
+   <result name="findAllJfail">/saveFail.jsp</result>
+  </action>
+   <action name="JfindbyEverything" class="action.JobseekerAction" method="JfindbyEverything">
+   <result name="Jfindsuccess">/JobseekerDisplay.jsp</result>
+   <result name="Jfindfail">/saveFail.jsp</result>
+  </action>
+   <action name="Jlogin" class="action.JobseekerAction" method="Jlogin">
+   <result name="loginsuccess">/index.jsp</result>
+   <result name="loginfail">/AdministratorLogin.jsp</result>
+  </action>
+  <action name="Jdelete" class="action.JobseekerAction" method="Jdelete">
+   <result name="dsuccess">/saveSuccess.jsp</result>
+   <result name="fail">/saveFail.jsp</result>
+  </action>
+  <action name="Jupdatefind" class="action.JobseekerAction" method="Jupdatefind">
+   <result name="ufsuccess">/JobseekerUpdate.jsp</result>
+   <result name="uffail">/findFail.jsp</result>
+  </action>
+   <action name="Jfindbyid" class="action.JobseekerAction" method="Jfindbyid">
+   <result name="ufsuccess">/JobseekerDisplayMess.jsp</result>
+   <result name="findAllCfail">/saveFail.jsp</result>
+  </action>
+   <action name="Jupdate" class="action.JobseekerAction" method="Jupdate">
+   <result name="usuccess">/AdministratorLogin.jsp</result>
+   <result name="ufail">/saveFail.jsp</result>
+  </action>
+  
+   <action name="Qsave" class="action.QuestionAction" method="Qsave">
+   <result name="success">/saveSuccess.jsp</result>
+   <result name="fail">/saveFail.jsp</result>
+  </action>
+  <action name="QfindallC" class="action.QuestionAction" method="QfindAll">
+   <result name="findallQsuccess">/QusetionDisplay.jsp</result>
+   <result name="findAllQfail">/saveFail.jsp</result>
+  </action>
+   <action name="QfindbyEverything" class="action.QuestionAction" method="QfindbyEverything">
+   <result name="Qfindsuccess">/QusetionDisplay.jsp</result>
+   <result name="Qfindfail">/saveFail.jsp</result>
+  </action>
+  <action name="Qdelete" class="action.QuestionAction" method="Qdelete">
+   <result name="dsuccess">/saveSuccess.jsp</result>
+   <result name="fail">/saveFail.jsp</result>
+  </action>
+  <action name="Qupdatefind" class="action.QuestionAction" method="Qupdatefind">
+
+   <result name="uffail">/findFail.jsp</result>
+  </action>
+   <action name="Qupdate" class="action.QuestionAction" method="Qupdate">
+   <result name="usuccess">/saveSuccess.jsp</result>
+   <result name="ufail">/saveFail.jsp</result>
+  </action>
+  
+  <action name="Stsave" class="action.StudentAction" method="Stsave">
+    <result name="success">/LoginChoose.jsp</result>
+   <result name="registerfail">/StudentRegister.jsp</result>
+  </action>
+  <action name="StfindallC" class="action.StudentAction" method="StfindAll">
+   <result name="findallJsuccess">/StudentDisplay.jsp</result>
+   <result name="findAllJfail">/saveFail.jsp</result>
+  </action>
+   <action name="Stlogin" class="action.StudentAction" method="Stlogin">
+   <result name="loginsuccess">/index.jsp</result>
+   <result name="loginfail">/AdministratorLogin.jsp</result>
+  </action>
+  <action name="Stdelete" class="action.StudentAction" method="Stdelete">
+   <result name="dsuccess">/saveSuccess.jsp</result>
+   <result name="fail">/saveFail.jsp</result>
+  </action>
+  <action name="Stupdatefind" class="action.StudentAction" method="Stupdatefind">
+   <result name="ufsuccess">/StudentUpdate.jsp</result>
+   <result name="uffail">/findFail.jsp</result>
+  </action>
+   <action name="Stupdate" class="action.StudentAction" method="Stupdate">
+   <result name="usuccess">/AdministratorLogin.jsp</result>
+   <result name="ufail">/saveFail.jsp</result>
+  </action>
+  </package>
+</struts>

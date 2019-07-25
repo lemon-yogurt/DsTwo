@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+html, body {width:100%;height:100%;} /*非常重要的样式让背景图片100%适应整个屏幕*/
+        .bg {display: table;width: 100%;height: 100%;text-align: center;color: #fff;background-size: cover;}
+        .my-navbar {padding:20px0 ;transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;}
+        .my-navbar a{background:transparent !important;color:#fff !important}
+        .my-navbar a:hover {color:#45bcf9 !important;background:transparent;outline:0}
+        .my-navbar a {transition: color 0.5s ease-in-out;}/*-webkit-transition ;-moz-transition*/
+        .top-nav {padding:0;background:#000;}
+    .my-menu{
+margin-top:0px;
+background:rgba(84,255,159,0.1);
+color:#fff !important;
+}   
+button.navbar-toggle > span.icon-bar {
+	background-color:#dedede;}
+	.dlm{
+color:white;
+margin-top:20px;
+}
+
+.img1{
+width:15px;
+float:left;
+}
+.img2{
+width:100%;
+}
+pre{
+background-color:transparent;
+border:0px;
+padding:40px;
+}

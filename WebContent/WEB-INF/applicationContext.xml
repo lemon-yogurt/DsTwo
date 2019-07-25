@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:context="http://www.springframework.org/schema/context"
+xmlns:aop="http://www.springframework.org/schema/aop"
+xmlns:tx="http://www.springframework.org/schema/tx"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+http://www.springframework.org/schema/aop
+http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
+http://www.springframework.org/schema/tx
+http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+
+<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
+        <property name="url" value="jdbc:sqlserver://localhost:1433;DatabaseName=DsDB"/>
+        <property name="username" value="sa"/>
+        <property name="password" value="123456"/>
+    </bean> 
+<bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean"> 
+     <property name="dataSource" ref="dataSource" />
+        <property name="hibernateProperties">
+         <props>
+           <prop key="hibernate.dialect"> 
+             org.hibernate.dialect.SQLServerDialect
+           </prop>
+         </props>
+        </property>
+        <property name="mappingResources">
+         <list>
+          <value>po/Contest.hbm.xml</value>
+          <value>po/Greenbuild.hbm.xml</value>
+          <value>po/Policy.hbm.xml</value>
+          <value>po/Schoolre.hbm.xml</value>
+          <value>po/Administrator.hbm.xml</value>
+          <value>po/Comment.hbm.xml</value>
+          <value>po/Employment.hbm.xml</value>
+          <value>po/Hr.hbm.xml</value>
+          <value>po/Jobseeker.hbm.xml</value>
+          <value>po/Question.hbm.xml</value>
+          <value>po/Student.hbm.xml</value>
+         </list>
+        </property>
+    
+    </bean>
+
+    <bean id="baseDao" class="dao.BaseHibernateDao">
+        <property name="sessionFactory" ref="sessionFactory" />
+    </bean>
+    <bean id="contestDao" class="dao.ContestDao" parent="baseDao" />
+    <bean id="greenbuildDao" class="dao.GreenbuildDao" parent="baseDao" />
+    <bean id="policyDao" class="dao.PolicyDao" parent="baseDao" />
+    <bean id="schoolreDao" class="dao.SchoolreDao" parent="baseDao" />
+    <bean id="administratorDao" class="dao.AdministratorDao" parent="baseDao" />
+    <bean id="commentDao" class="dao.CommentDao" parent="baseDao" />
+    <bean id="employmentDao" class="dao.EmploymentDao" parent="baseDao" />
+    <bean id="hrDao" class="dao.HrDao" parent="baseDao" />
+    <bean id="jobseekerDao" class="dao.JobseekerDao" parent="baseDao" />
+    <bean id="questionDao" class="dao.QuestionDao" parent="baseDao" />
+    <bean id="studentDao" class="dao.StudentDao" parent="baseDao" />
+
+    <bean id="contestService" class="service.ContestService">
+        <property name="contestDao" ref="contestDao" />
+    </bean>
+    <bean id="greenbuildService" class="service.GreenbuildService">
+        <property name="greenbuildDao" ref="greenbuildDao" />
+    </bean>
+    <bean id="policyService" class="service.PolicyService">
+        <property name="policyDao" ref="policyDao" />
+    </bean>
+    <bean id="schoolreService" class="service.SchoolreService">
+        <property name="schoolreDao" ref="schoolreDao" />
+    </bean>
+     <bean id="administratorService" class="service.AdministratorService">
+        <property name="administratorDao" ref="administratorDao" />
+    </bean>
+    <bean id="commentService" class="service.CommentService">
+        <property name="commentDao" ref="commentDao" />
+    </bean>
+    <bean id="employmentService" class="service.EmploymentService">
+        <property name="employmentDao" ref="employmentDao" />
+    </bean>
+    <bean id="hrService" class="service.HrService">
+        <property name="hrDao" ref="hrDao" />
+    </bean>
+    <bean id="jobseekerService" class="service.JobseekerService">
+        <property name="jobseekerDao" ref="jobseekerDao" />
+    </bean>
+    <bean id="questionService" class="service.QuestionService">
+        <property name="questionDao" ref="questionDao" />
+    </bean>
+    <bean id="studentService" class="service.StudentService">
+        <property name="studentDao" ref="studentDao" />
+    </bean>
+
+ 
+    <bean id="contestAction" class="action.ContestAction" scope="prototype">
+        <property name="contestService" ref="contestService" />
+    </bean>
+     <bean id="greenbuildAction" class="action.GreenbuildAction" scope="prototype">
+        <property name="greenbuildService" ref="greenbuildService" />
+    </bean>
+     <bean id="policyAction" class="action.PolicyAction" scope="prototype">
+        <property name="policyService" ref="policyService" />
+    </bean>
+     <bean id="schoolreAction" class="action.SchoolreAction" scope="prototype">
+        <property name="schoolreService" ref="schoolreService" />
+    </bean>
+    <bean id="administratorAction" class="action.AdministratorAction" scope="prototype">
+        <property name="administratorService" ref="administratorService" />
+    </bean>
+    <bean id="employmentAction" class="action.EmploymentAction" scope="prototype">
+        <property name="employmentService" ref="employmentService" />
+    </bean>
+    <bean id="commentAction" class="action.CommentAction" scope="prototype">
+        <property name="commentService" ref="commentService" />
+    </bean>
+    <bean id="hrAction" class="action.HrAction" scope="prototype">
+        <property name="hrService" ref="hrService" />
+    </bean>
+    <bean id="jobseekerAction" class="action.JobseekerAction" scope="prototype">
+        <property name="jobseekerService" ref="jobseekerService" />
+    </bean>
+    <bean id="questionAction" class="action.QuestionAction" scope="prototype">
+        <property name="questionService" ref="questionService" />
+    </bean>
+    <bean id="studentAction" class="action.StudentAction" scope="prototype">
+        <property name="studentService" ref="studentService" />
+    </bean>
+    
+</beans>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD
+3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<!--  -->
+<class name="po.Employment" table="employment" catalog="DsDB"  schema="dbo">
+ <id name="id" type="int">
+   <column name="id" />
+   <generator class="identity" />
+ </id>
+  <property name="workname" type="string">
+   <column name="workname" length="50"/>
+ </property>
+ <property name="position" type="string">
+   <column name="position" length="50"/>
+ </property>
+ <property name="paymin" type="int">
+   <column name="paymin" />
+ </property>
+ <property name="paymax" type="int">
+   <column name="paymax" />
+ </property>
+ <property name="workpalce" type="string">
+   <column name="workpalce" length="50"/>
+ </property>
+  <property name="worktime" type="string">
+   <column name="worktime" length="50"/>
+ </property>
+ <property name="education" type="string">
+   <column name="education" length="50" />
+ </property>
+ <property name="updatedate" type="date">
+   <column name="updatedate"/>
+ </property>
+ <property name="hrid" type="int">
+   <column name="hrid"/>
+ </property>
+ <property name="agemin" type="int">
+   <column name="agemin"/>
+ </property>
+ <property name="agemax" type="int">
+   <column name="agemax"/>
+ </property>
+  <property name="workduty" type="string">
+   <column name="workduty"/>
+ </property>
+  <property name="workrequire" type="string">
+   <column name="workrequire"/>
+ </property>
+  <property name="workad" type="string">
+   <column name="workad"/>
+ </property>
+  <property name="companyname" type="string">
+   <column name="companyname" length="50"/>
+ </property>
+  <property name="companydescription" type="string">
+   <column name="companydescription"/>
+ </property>
+</class>
+</hibernate-mapping>
